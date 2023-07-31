@@ -1,5 +1,6 @@
 from nonebot.plugin import PluginMetadata
 
+
 from .config import Config
 
 __plugin_meta__ = PluginMetadata(
@@ -13,7 +14,7 @@ __plugin_meta__ = PluginMetadata(
     homepage="https://github.com/Sydrr0/nonebot-plugin-buff",
     # 发布必填。
 
-    #config=Config,
+    # config=Config,
     # 插件配置项类，如无需配置可不填写。
 
     supported_adapters={"~onebot.v11"},
@@ -79,15 +80,16 @@ def sending_txt(name_index):   # 传入两个列表，第一个是符合的商�
     result = result.rstrip('\n')
     return result
 
-def get_miniprice(num,obtype): # num是获取到的商品index, ob_type是指崭新出厂之类的
+async def get_miniprice(num,obtype): # num是获取到的商品index, ob_type是指崭新出厂之类的
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! ob_type 还未表达，需使用正则表达式提取 !!!!!
     base_url ='https://buff.163.com/goods/'
     extra_url = str(num)
     url = base_url + extra_url
-    response = httpx.get(url)
-    page_url = response.text
-    data_getten = BeautifulSoup(page_url, "lxml")
-    mini_price_html = str(data_getten.find_all("div", class_="scope-btns"))
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url)
+        page_url = response.text
+        data_getten = BeautifulSoup(page_url, "lxml")
+        mini_price_html = str(data_getten.find_all("div", class_="scope-btns"))
 
     # ob_type = r"\((.*?)\)[^()]*$" 是获取obtype的re表达式
     pattern = r'{ob_type}.*?data\-price\="([^"]+)"'.format(ob_type = obtype) 
