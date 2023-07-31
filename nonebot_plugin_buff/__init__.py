@@ -13,7 +13,7 @@ __plugin_meta__ = PluginMetadata(
     homepage="https://github.com/Sydrr0/nonebot-plugin-buff",
     # 发布必填。
 
-    config=Config,
+    #config=Config,
     # 插件配置项类，如无需配置可不填写。
 
     supported_adapters={"~onebot.v11"},
