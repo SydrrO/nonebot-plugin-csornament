@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "nonebot-plugin-buff"
+version = "0.1.0"
+description = "实时爬取BUFF饰品价格"
+authors = ["Sydrr0 <2562312527@qq.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "nonebot_plugin_buff"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+nonebot2 = "^2.0.1"
+requests = "^2.31.0"
+bs4 = "^0.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
