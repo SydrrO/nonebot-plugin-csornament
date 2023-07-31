@@ -37,7 +37,7 @@ from nonebot.params import CommandArg
 from nonebot.typing import T_State   # 继承上一个函数的方法
 
 # 后端爬虫所需要的插件
-import requests
+import httpx
 import re
 import os
 from bs4 import BeautifulSoup
@@ -84,7 +84,7 @@ def get_miniprice(num,obtype): # num是获取到的商品index, ob_type是指崭
     base_url ='https://buff.163.com/goods/'
     extra_url = str(num)
     url = base_url + extra_url
-    response = requests.get(url)
+    response = httpx.get(url)
     page_url = response.text
     data_getten = BeautifulSoup(page_url, "lxml")
     mini_price_html = str(data_getten.find_all("div", class_="scope-btns"))
