@@ -12,7 +12,6 @@ python = "^3.8"
 nonebot2 = "^2.0.1"
 bs4 = "^0.0.1"
 httpx = "^0.24.1"
-asyncio = "^3.4.3"
 
 [build-system]
 requires = ["poetry-core"]
