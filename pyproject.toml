@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-buff"
-version = "0.1.0"
+version = "0.1.1"
 description = "实时爬取BUFF饰品价格"
 authors = ["Sydrr0 <2562312527@qq.com>"]
 license = "MIT"
