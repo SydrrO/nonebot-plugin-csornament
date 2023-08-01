@@ -10,8 +10,8 @@ packages = [{include = "nonebot_plugin_buff"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 nonebot2 = "^2.0.1"
-requests = "^2.31.0"
 bs4 = "^0.0.1"
+httpx = "^0.24.1"
 
 
 [build-system]
