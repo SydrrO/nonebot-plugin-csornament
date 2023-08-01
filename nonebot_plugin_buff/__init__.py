@@ -29,11 +29,15 @@ from nonebot.params import ArgPlainText # 提取消息内的字符串的方法
 from nonebot.adapters import Message
 from nonebot.params import CommandArg 
 from nonebot.typing import T_State   # 继承上一个函数的方法
+from nonebot import get_bot
+
+
 
 # 后端爬虫所需要的插件
 import httpx
 import re
 import os
+import asyncio
 from bs4 import BeautifulSoup
 
 # 创建本地文件夹，用于存放数据
@@ -94,38 +98,59 @@ async def get_miniprice(num,obtype): # num是获取到的商品index, ob_type是
 
 
 
+
 @search.handle()  # 这是为了接收 查询xxx 中的xxx
 async def handle_function(matcher: Matcher, args: Message = CommandArg()):
     if args.extract_plain_text():
         matcher.set_arg("name", args)  # 获取的xxx
     
-@search.got("name", prompt="请输入饰品名称")   # 用got函数继承xxx
+@search.got("name", prompt="请输入饰品名称")
 async def got_name(state: T_State, name: str = ArgPlainText()):
-    name_input = (f"{name}") # 用户使用 查询xxx 这里的 name_input 即为xxx type:str
-    num_list = find_numbers(name_input)[0]   # 获取序号的列表
-    obname_list = find_numbers(name_input)[1]   # 获取物品名称的列表
-    asking_txt = sending_txt(name_index= obname_list)
-    state['num_list'] = num_list   # 保存list到下一个函数内使用
+    name_input = f"{name}"  # 用户输入的饰品名称
+    num_list = find_numbers(name_input)[0]  # 获取序号的列表
+    obname_list = find_numbers(name_input)[1]  # 获取物品名称的列表
+    asking_txt = sending_txt(name_index=obname_list)
+    state['num_list'] = num_list  # 保存list到下一个函数内使用
     state['name_list'] = obname_list
-    await search.send(asking_txt)
+    
+    if not num_list and not obname_list:
+        await search.finish('数据库中暂时未收录该饰品')
+    else:
+        await search.send(asking_txt)
 
+# 正则表达式获取最后一个括号内的内容，就是obtype
+from datetime import timedelta
 
 @search.got("num_index", prompt="请输入序号")
-async def got_num(state: T_State ,num_index: str = ArgPlainText()):
-    num_input = (f"{num_index}") # 用户使用序号 这里的 num_input 即为index type:str 
+async def got_num(state: T_State, num_index: str = ArgPlainText()):
+    num_input = f"{num_index}"  # 用户输入的序号
     obindex = state['num_list'][int(num_input)]
     obname_full = state['name_list'][int(num_input)]
-    # 正则表达式获取最后一个括号内的内容，就是obtype
     pattern = r"\((.*?)\)[^()]*$"
     match = re.search(pattern, obname_full)
     if match:
         obname_type = match.group(1)
     else:
         pass
-    # 使用 get_miniprice() 获取此时的最低价格, 并结束此次事件
-    miniprice = get_miniprice(num= obindex, obtype= obname_type)
-    await search.finish('%s\n'
-                        '现价: ￥ %s'
-                        'Buff代码: %s'% (obname_full,
-                                        miniprice,
-                                        obindex))
+
+    async def main():
+        miniprice = await get_miniprice(num=obindex, obtype=obname_type)
+        await search.finish('%s\n现价: ￥ %s\nBuff代码: %s' % (obname_full, miniprice, obindex))
+
+    loop = asyncio.get_event_loop()
+    loop.create_task(main())
+    
+    try:
+        bot = get_bot()
+        if search.is_private_chat():
+
+            await bot.wait(timedelta(minutes=1))  # 设置等待时间为1分钟
+            await search.finish("输入时间超过一分钟，请重新发起查询。")
+        else:
+            await bot.wait(timedelta(minutes=1))  # 设置等待时间为1分钟
+            await search.finish(f"@{search.sender.nickname} 输入时间超过一分钟，请重新发起查询。")
+    except asyncio.TimeoutError:
+        if search.is_private_chat():
+            await search.finish("输入时间超过一分钟，请重新发起查询。")
+        else:
+            await search.finish(f"@{search.sender.nickname} 输入时间超过一分钟，请重新发起查询。")
