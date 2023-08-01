@@ -37,7 +37,6 @@ from nonebot import get_bot
 import httpx
 import re
 import os
-import asyncio
 from bs4 import BeautifulSoup
 
 # 创建本地文件夹，用于存放数据
@@ -119,7 +118,6 @@ async def got_name(state: T_State, name: str = ArgPlainText()):
         await search.send(asking_txt)
 
 # 正则表达式获取最后一个括号内的内容，就是obtype
-from datetime import timedelta
 
 @search.got("num_index", prompt="请输入序号")
 async def got_num(state: T_State, num_index: str = ArgPlainText()):
@@ -133,24 +131,5 @@ async def got_num(state: T_State, num_index: str = ArgPlainText()):
     else:
         pass
 
-    async def main():
-        miniprice = await get_miniprice(num=obindex, obtype=obname_type)
-        await search.finish('%s\n现价: ￥ %s\nBuff代码: %s' % (obname_full, miniprice, obindex))
-
-    loop = asyncio.get_event_loop()
-    loop.create_task(main())
-    
-    try:
-        bot = get_bot()
-        if search.is_private_chat():
-
-            await bot.wait(timedelta(minutes=1))  # 设置等待时间为1分钟
-            await search.finish("输入时间超过一分钟，请重新发起查询。")
-        else:
-            await bot.wait(timedelta(minutes=1))  # 设置等待时间为1分钟
-            await search.finish(f"@{search.sender.nickname} 输入时间超过一分钟，请重新发起查询。")
-    except asyncio.TimeoutError:
-        if search.is_private_chat():
-            await search.finish("输入时间超过一分钟，请重新发起查询。")
-        else:
-            await search.finish(f"@{search.sender.nickname} 输入时间超过一分钟，请重新发起查询。")
+    miniprice = await get_miniprice(num=obindex, obtype=obname_type)
+    await search.finish('%s\n现价: ￥ %s\nBuff代码: %s' % (obname_full, miniprice, obindex))
