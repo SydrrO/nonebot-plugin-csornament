@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-buff"
-version = "0.1.2"
+version = "0.2.0"
 description = "实时爬取BUFF饰品价格"
 authors = ["Sydrr0 <2562312527@qq.com>"]
 license = "MIT"
@@ -12,7 +12,7 @@ python = "^3.8"
 nonebot2 = "^2.0.1"
 bs4 = "^0.0.1"
 httpx = "^0.24.1"
-
+asyncio = "^3.4.3"
 
 [build-system]
 requires = ["poetry-core"]
