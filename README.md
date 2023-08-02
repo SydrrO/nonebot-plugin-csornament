@@ -10,6 +10,6 @@
  4. 发送 **查询/查 xxx** ，然后跟随bot指令即可查询价格
 
  ## 附件
-data.txt下载地址：[Release最新版本下载地址](https://githubfast.com/Sydrr0/nonebot-plugin-buff/releases/tag/v0.2.1)
+data.txt下载地址：[Release最新版本下载地址](https://githubfast.com/Sydrr0/nonebot-plugin-buff/releases)
 
 联系QQ：**2562312527**
