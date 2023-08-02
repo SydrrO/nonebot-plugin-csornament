@@ -1,5 +1,4 @@
 # 欢迎使用 nonebot_plugin_buff
-![image](https://usercontent.githubfast.com/avatars/u/129657153?v=4)
 ![tip](https://badgen.net/badge/python/3.8+/orange?i)  ![tip](https://badgen.net/badge/windows/10+/green?i)  ![tip](https://badgen.net/badge/ubuntu/20.04+/pink?i) 
 
 ## 使用方法
