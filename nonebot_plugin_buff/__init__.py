@@ -33,6 +33,7 @@ import httpx
 import re
 import os
 from bs4 import BeautifulSoup
+import lxml #为了防止解析时bs4拉不出屎的毛病，导入lxml解析器
 
 # 创建本地文件夹，用于存放数据
 save_path = "./search_data"
@@ -43,22 +44,41 @@ else:
 
 search = on_command("查询", aliases={"搜索", "查"}, priority=10, block=True)
 
-def find_numbers(keyword):
+def get_correct_lists(keywords_str) -> list:
+    with open("search_data/data.txt", "r", encoding="utf-8") as file:
+        data_lines = file.readlines()
+    
+    if any(char.isalpha() for char in keywords_str):
+        if "，" not in keywords_str:
+            keywords = [keywords_str.lower()]
+        else:
+            keywords = [keyword.lower() for keyword in keywords_str.split("，")]
+    else:
+        keywords = keywords_str
+    
     num_list = []
     ob_name_list = []
-    with open('./search_data/data.txt', 'r',encoding='utf-8') as file:
-        for line in file:
-            if keyword in line:
-                # 寻找第一个逗号的位置
-                comma_index = line.index(',')
-                # 提取逗号前面的内容，并转换为 str
-                number = str(line[:comma_index].strip())
-                num_list.append(number)
-                # 提取逗号后面的内容，并转换为 str
-                ob_name = str(line[comma_index + 1:].strip())
-                ob_name_list.append(ob_name)
-    # 这里得到了两个列表，第一个是buff序号列表，第二个是商品名称列表
-    return num_list,ob_name_list
+    
+    for line in data_lines:
+        line = line.strip()
+        elements = line.split(",")
+        
+        lowercase_keywords = [keyword.lower() for keyword in keywords] if isinstance(keywords, list) else keywords.lower()
+        lowercase_elements = elements[1].lower()
+        
+        if all(keyword in lowercase_elements for keyword in lowercase_keywords):
+            numindex = int(elements[0])
+            content = elements[1] 
+            num_list.append(numindex)
+            ob_name_list.append(content)
+    
+    return num_list, ob_name_list
+
+
+
+
+
+
 
 def sending_txt(name_index):   # 传入两个列表，第一个是符合的商品编码。第二个是名称
     name_result_list = []    # 得到一个用以下 for 循环的结果，需要逐行输出
@@ -101,8 +121,11 @@ async def handle_function(matcher: Matcher, args: Message = CommandArg()):
 @search.got("name", prompt="请输入饰品名称")
 async def got_name(state: T_State, name: str = ArgPlainText()):
     name_input = f"{name}"  # 用户输入的饰品名称
-    num_list = find_numbers(name_input)[0]  # 获取序号的列表
-    obname_list = find_numbers(name_input)[1]  # 获取物品名称的列表
+    try:
+        num_list = get_correct_lists(name_input)[0]  # 获取序号的列表
+        obname_list = get_correct_lists(name_input)[1]  # 获取物品名称的列表
+    except:
+        await search.finish('data.txt未放入指定文件夹\nreadme是不是没看！！！\nhttps://github.com/Sydrr0/nonebot-plugin-buff/tree/main')
     asking_txt = sending_txt(name_index=obname_list)
     state['num_list'] = num_list  # 保存list到下一个函数内使用
     state['name_list'] = obname_list
