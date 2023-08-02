@@ -7,11 +7,15 @@
 ### 先安装**nonebot_plugin_buff**
  nonebot商店安装（推荐，但在审核中）
 
- `nb plugin install nonebot-plugin-buff`
+ ```
+ nb plugin install nonebot-plugin-buff
+```
  
  pip安装（推荐）
   
- `pip install  nonebot_pluin_buff`
+ ```
+ pip install  nonebot_pluin_buff
+```
  
  此方法需要在入口文件==bot.py==导入
  具体请移步nonebot文档[创建入口文件](https://nonebot.dev/docs/tutorial/application)
