@@ -17,7 +17,7 @@
  pip install  nonebot_pluin_buff
 ```
  
- 此方法需要在入口文件==bot.py==导入
+ 此方法需要在入口文件**bot.py**导入
  具体请移步nonebot文档[创建入口文件](https://nonebot.dev/docs/tutorial/application)
  
  ### 使用
