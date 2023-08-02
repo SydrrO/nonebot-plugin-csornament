@@ -33,6 +33,10 @@
 
  ## 附件(包含数据集和源码)
 :key:下载：[Release最新版本下载地址](https://githubfast.com/Sydrr0/nonebot-plugin-buff/releases)
+
+
 :satellite:QQ：**2562312527**
+
 :mailbox:邮箱：**2562312527@qq.com**
+
 :telephone_receiver:Telegram: **SydrrO**
