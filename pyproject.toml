@@ -1,11 +1,11 @@
 [tool.poetry]
-name = "nonebot-plugin-buff"
+name = "nonebot-plugin-csgo-jewelryquering"
 version = "0.3.0"
-description = "实时爬取BUFF饰品价格"
+description = "一款模拟查找饰品价格的机器人"
 authors = ["Sydrr0 <2562312527@qq.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "nonebot_plugin_buff"}]
+packages = [{include = "nonebot-plugin-csgo-jewelryquering"}]
 
 [tool.poetry.dependencies]
 python = "^3.8"
