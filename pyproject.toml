@@ -3,7 +3,7 @@ name = "nonebot_plugin_csornament"
 version = "0.1.0"
 description = "hahahhahaah"
 authors = [
-    {name = "", email = "2562312527@qq.com"},
+    {name = "Sydrr0", email = "2562312527@qq.com"},
 ]
 dependencies = [
     "lxml>=4.9.3",
