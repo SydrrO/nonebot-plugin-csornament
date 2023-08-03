@@ -1,0 +1,19 @@
+[project]
+name = "nonebot_plugin_csornament"
+version = "0.1.0"
+description = "hahahhahaah"
+authors = [
+    {name = "", email = "2562312527@qq.com"},
+]
+dependencies = [
+    "lxml>=4.9.3",
+    "bs4>=0.0.1",
+    "nonebot2>=2.0.1",
+]
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
