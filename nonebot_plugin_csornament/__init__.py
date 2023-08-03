@@ -1,12 +1,12 @@
 from nonebot.plugin import PluginMetadata
 from .config import Config
 __plugin_meta__ = PluginMetadata(
-    name="nonebot-plugin-csjewelry",
+    name="nonebot-plugin-csornament",
     description="一款模拟查找饰品价格的机器人",
     usage="输入 查询/搜索/查 xxx 按照机器人的提示，将会获取到目前市场上最低的饰品价格",
     type="application",
     # 发布必填，当前有效类型有：`library`（为其他插件编写提供功能），`application`（向机器人用户提供功能）。
-    homepage="https://github.com/Sydrr0/nonebot-plugin-csjewelry",
+    homepage="https://github.com/Sydrr0/nonebot-plugin-csornament",
     # 发布必填。
 )
 
