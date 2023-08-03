@@ -7,9 +7,9 @@
 
 _🔼好看吗，好看的话就点个⭐吧，这(~姐姐~)可以给予作者最大的动力哦🔼_
 
-# nonebot-plugin-buff
+# nonebot-plugin-csjewelry
 
-_✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的机器人buff ✨_
+_✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的饰品查询机器人 ✨_
 
 ![tip](https://badgen.net/badge/python/3.8+/orange?i)  ![tip](https://badgen.net/badge/windows/10+/green?i)  ![tip](https://badgen.net/badge/ubuntu/20.04+/pink?i)  ![tip](https://badgen.net/badge/windows/10+/green?i) ![tip](https://badgen.net/badge/license/MIT/blue?i) ![tip](https://badgen.net/badge/nonebot/2.0.0rc1+/red?i)
 
@@ -19,17 +19,17 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
 
 ## 使用方法
 
-### 先安装**nonebot_plugin_buff**
+### 先安装**nonebot_plugin_csjewelry**
  nonebot商店安装（推荐，但在审核中）
 
  ```
- nb plugin install nonebot-plugin-buff
+ nb plugin install nonebot-plugin-csjewelry
 ```
  
  pip安装（推荐）
   
  ```
- pip install nonebot_pluin_buff
+ pip install nonebot_pluin_csjewelry
 ```
  
  此方法需要在入口文件**bot.py**导入
@@ -53,7 +53,7 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
 
 
  ## 附件(包含数据集和源码)
-:key:下载：[Release最新版本下载地址](https://githubfast.com/Sydrr0/nonebot-plugin-buff/releases)
+:key:下载：[Release最新版本下载地址](https://githubfast.com/Sydrr0/nonebot-plugin-csjewelry/releases)
 
 
 :satellite:QQ：**2562312527**
