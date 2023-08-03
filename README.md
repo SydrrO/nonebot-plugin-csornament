@@ -1,6 +1,17 @@
-[![](https://pic.imgdb.cn/item/64ca75781ddac507ccf21163.webp)](https://pic.imgdb.cn/item/64ca75781ddac507ccf21163.webp)
-# 欢迎使用 nonebot_plugin_buff💋
+<div align="center">
+
+  <a href="https://v2.nonebot.dev/">
+    <img src="https://v2.nonebot.dev/logo.png" width="200" height="200" alt="nonebot">
+  </a>
+
+# nonebot-plugin-petpet
+
+_✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，制作头像相关的表情包 ✨_
+
 ![tip](https://badgen.net/badge/python/3.8+/orange?i)  ![tip](https://badgen.net/badge/windows/10+/green?i)  ![tip](https://badgen.net/badge/ubuntu/20.04+/pink?i) 
+
+</div>
+
 
 ## 使用方法
 
@@ -14,7 +25,7 @@
  pip安装（推荐）
   
  ```
- pip install  nonebot_pluin_buff
+ pip install nonebot_pluin_buff
 ```
  
  此方法需要在入口文件**bot.py**导入
