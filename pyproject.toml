@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nonebot-plugin-csjewelry"
-version = "0.3.1"
+version = "0.1.0"
 description = "一款模拟查找饰品价格的机器人"
 authors = ["Sydrr0 <2562312527@qq.com>"]
 license = "MIT"
