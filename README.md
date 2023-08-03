@@ -7,7 +7,7 @@
 
 _🔼好看吗，好看的话就点个⭐吧，这(~姐姐~)可以给予作者最大的动力哦🔼_
 
-# nonebot-plugin-csjewelry
+# nonebot-plugin-csornament
 
 _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的饰品查询机器人 ✨_
 
@@ -19,17 +19,17 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
 
 ## 使用方法
 
-### 先安装**nonebot_plugin_csjewelry**
+### 先安装**nonebot_plugin_csornament**
  nonebot商店安装（推荐，但在审核中）
 
  ```
- nb plugin install nonebot-plugin-csjewelry
+ nb plugin install nonebot-plugin-csornament
 ```
  
  pip安装（推荐）
   
  ```
- pip install nonebot_pluin_csjewelry
+ pip install nonebot_pluin_csornament
 ```
  
  此方法需要在入口文件**bot.py**导入
@@ -53,7 +53,7 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
 
 
  ## 附件(包含数据集和源码)
-:key:下载：[Release最新版本下载地址](https://githubfast.com/Sydrr0/nonebot-plugin-csjewelry/releases)
+:key:下载：[Release最新版本下载地址](https://githubfast.com/Sydrr0/nonebot-plugin-csornament/releases)
 
 
 :satellite:QQ：**2562312527**
