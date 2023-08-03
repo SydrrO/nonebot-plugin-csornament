@@ -1,14 +1,18 @@
 <div align="center">
 
   <a href="https://v2.nonebot.dev/">
-    <img src="https://v2.nonebot.dev/logo.png" width="200" height="200" alt="nonebot">
+    <img src="https://pic.imgdb.cn/item/64ca75781ddac507ccf21163.webp">
+
   </a>
 
-# nonebot-plugin-petpet
+_🔼好看吗，好看的话就点个⭐吧，这(~姐姐~)可以给予作者最大的动力哦🔼_
 
-_✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，制作头像相关的表情包 ✨_
+# nonebot-plugin-buff
 
-![tip](https://badgen.net/badge/python/3.8+/orange?i)  ![tip](https://badgen.net/badge/windows/10+/green?i)  ![tip](https://badgen.net/badge/ubuntu/20.04+/pink?i) 
+_✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的机器人buff ✨_
+
+![tip](https://badgen.net/badge/python/3.8+/orange?i)  ![tip](https://badgen.net/badge/windows/10+/green?i)  ![tip](https://badgen.net/badge/ubuntu/20.04+/pink?i)  ![tip](https://badgen.net/badge/windows/10+/green?i) ![tip](https://badgen.net/badge/license/MIT/blue?i) ![tip](https://badgen.net/badge/nonebot/2.0.0rc1+/red?i)
+
 
 </div>
 
