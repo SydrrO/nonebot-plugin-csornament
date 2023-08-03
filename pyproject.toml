@@ -1,6 +1,6 @@
 [project]
 name = "nonebot_plugin_csornament"
-version = "0.1.1"
+version = "0.1.2"
 description = "nonebot社区插件，查询CSGO饰品"
 authors = [
     {name = "Sydrr0", email = "2562312527@qq.com"},
@@ -9,6 +9,7 @@ dependencies = [
     "lxml>=4.9.3",
     "bs4>=0.0.1",
     "nonebot2>=2.0.1",
+    "httpx>=0.23.3"
 ]
 requires-python = ">=3.8"
 readme = "README.md"
