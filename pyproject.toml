@@ -1,6 +1,6 @@
 [project]
 name = "nonebot_plugin_csornament"
-version = "0.1.3"
+version = "0.1.4"
 description = "nonebot社区插件，查询CSGO饰品"
 authors = [
     {name = "Sydrr0", email = "2562312527@qq.com"},
