@@ -1,5 +1,5 @@
 __plugin_meta__ = PluginMetadata(
-    name="nonebot-plugin-csornament",
+    name="CSGO饰品查询机器人",
     description="一款模拟查找饰品价格的机器人",
     usage="输入 查询/搜索/查 xxx 按照机器人的提示，将会获取到目前市场上最低的饰品价格",
     type="application",
