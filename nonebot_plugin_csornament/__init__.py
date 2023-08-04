@@ -1,5 +1,3 @@
-from nonebot.plugin import PluginMetadata
-from .config import Config
 __plugin_meta__ = PluginMetadata(
     name="nonebot-plugin-csornament",
     description="一款模拟查找饰品价格的机器人",
@@ -9,15 +7,8 @@ __plugin_meta__ = PluginMetadata(
     homepage="https://github.com/Sydrr0/nonebot-plugin-csornament",
     # 发布必填。
 )
-
-
-# 插件初始化
-from nonebot import get_driver
-from .config import Config
-global_config = get_driver().config
-config = Config.parse_obj(global_config)
-
 # nonebot2 的函数导入
+from nonebot import get_driver
 from nonebot.matcher import Matcher
 from nonebot.plugin import on_command
 from nonebot.params import ArgPlainText # 提取消息内的字符串的方法
