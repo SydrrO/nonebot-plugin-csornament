@@ -1,3 +1,4 @@
+from nonebot.plugin import PluginMetadata
 __plugin_meta__ = PluginMetadata(
     name="CSGO饰品查询机器人",
     description="一款模拟查找饰品价格的机器人",
@@ -8,14 +9,12 @@ __plugin_meta__ = PluginMetadata(
     # 发布必填。
 )
 # nonebot2 的函数导入
-from nonebot import get_driver
 from nonebot.matcher import Matcher
 from nonebot.plugin import on_command
 from nonebot.params import ArgPlainText # 提取消息内的字符串的方法
 from nonebot.adapters import Message
 from nonebot.params import CommandArg 
 from nonebot.typing import T_State   # 继承上一个函数的方法
-from nonebot import get_bot
 
 
 
