@@ -20,7 +20,7 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
 ## 使用方法
 
 ### 先安装**nonebot_plugin_csornament**
- nonebot商店安装（推荐，但在审核中）
+ nonebot商店安装（推荐）
 
  ```
  nb plugin install nonebot-plugin-csornament
@@ -29,7 +29,7 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
  pip安装（推荐）
   
  ```
- pip install nonebot_pluin_csornament
+ pip install nonebot_plugin_csornament
 ```
  
  此方法需要在入口文件**bot.py**导入
