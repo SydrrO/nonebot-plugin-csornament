@@ -5,7 +5,7 @@
 
   </a>
 
-_🔼好看吗，好看的话就点个⭐吧，这(~姐姐~)可以给予作者最大的动力哦🔼_
+_🔼好看吗，好看的话就点个⭐(求求了)吧，这(~姐姐~)可以给予作者最大的动力哦🔼_
 
 # nonebot-plugin-csornament
 
@@ -26,7 +26,7 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
  nb plugin install nonebot-plugin-csornament
 ```
  
- pip安装（推荐）
+ pip安装（第二推荐，但需要手动配置入口文件）
   
  ```
  pip install nonebot_plugin_csornament
@@ -56,7 +56,7 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
 :key:下载：[Release最新版本下载地址](https://github.com/Sydrr0/nonebot-plugin-csornament/releases)
 
 
-:satellite:QQ：**2562312527（不点star不回复(bushi)）**
+:satellite:QQ：**2562312527（不点⭐不回复(bushi)）**
 
 :mailbox:邮箱：**2562312527@qq.com**
 
