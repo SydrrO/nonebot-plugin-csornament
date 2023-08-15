@@ -53,10 +53,10 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
 
 
  ## 附件(包含数据集和源码)
-:key:下载：[Release最新版本下载地址](https://githubfast.com/Sydrr0/nonebot-plugin-csornament/releases)
+:key:下载：[Release最新版本下载地址](https://github.com/Sydrr0/nonebot-plugin-csornament/releases)
 
 
-:satellite:QQ：**2562312527**
+:satellite:QQ：**2562312527（不点star不回复(bushi)）**
 
 :mailbox:邮箱：**2562312527@qq.com**
 
