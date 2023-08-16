@@ -9,7 +9,7 @@ _🔼好看吗，好看的话就点个⭐(求求了)吧，这(~姐姐~)可以给
 
 # nonebot-plugin-csornament
 
-_✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的饰品查询机器人 ✨_
+_✨ [Nonebot2](https://github.com/nonebot/nonebot2) 插件，拥有您的饰品查询机器人 ✨_
 
 ![tip](https://badgen.net/badge/python/3.8+/orange?i)  ![tip](https://badgen.net/badge/windows/10+/green?i)  ![tip](https://badgen.net/badge/ubuntu/20.04+/pink?i)  ![tip](https://badgen.net/badge/windows/10+/green?i) ![tip](https://badgen.net/badge/license/MIT/blue?i) ![tip](https://badgen.net/badge/nonebot/2.0.0rc1+/red?i)
 
