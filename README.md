@@ -61,3 +61,5 @@ _✨ [Nonebot2](https://githubfast.com/nonebot/nonebot2) 插件，拥有您的�
 :mailbox:邮箱：**2562312527@qq.com**
 
 :telephone_receiver:Telegram: **SydrrO**
+
+###  😃**如果有问题先提issues，感谢**😃
