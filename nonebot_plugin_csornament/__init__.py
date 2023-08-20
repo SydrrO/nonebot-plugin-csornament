@@ -115,7 +115,7 @@ async def got_name(state: T_State, name: str = ArgPlainText()):
         num_list = get_correct_lists(name_input)[0]  # 获取序号的列表
         obname_list = get_correct_lists(name_input)[1]  # 获取物品名称的列表
     except:
-        await search.finish('data.txt未放入指定文件夹\nreadme是不是没看!!!\nhttps://github.com/Sydrr0/nonebot-plugin-csjewelry/tree/main')
+        await search.finish('data.csv未放入指定文件夹\nreadme是不是没看!!!\nhttps://github.com/Sydrro/nonebot-plugin-csornament/tree/main')
     asking_txt = sending_txt(name_index=obname_list)
     state['num_list'] = num_list  # 保存list到下一个函数内使用
     state['name_list'] = obname_list
