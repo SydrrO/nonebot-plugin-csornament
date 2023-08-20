@@ -53,7 +53,7 @@ _✨ [Nonebot2](https://github.com/nonebot/nonebot2) 插件，拥有您的饰品
 
 
  ## 附件(包含数据集和源码)
-:key:下载：[Release最新版本下载地址](https://github.com/Sydrr0/nonebot-plugin-csornament/releases)
+:key:下载：[Release最新版本下载地址](https://github.com/Sydrro/nonebot-plugin-csornament/releases)
 
 
 :satellite:QQ：**2562312527（不点⭐不回复(bushi)）**
